@@ -3709,8 +3709,76 @@ main {
   }
 }
 
-/* Mobile final polish
+/* Production polish overrides
+   Keep final handoff adjustments here so later tweaks are easy to find.
 ===================================== */
+@media (min-width: 981px) {
+  .final-cta__content {
+    width: min(620px, 100%);
+  }
+
+  .site-nav {
+    gap: 14px;
+  }
+
+  .site-nav a {
+    min-width: 44px;
+    justify-content: center;
+    padding-inline: 10px;
+  }
+
+  .site-nav a::after {
+    left: 10px;
+    right: 10px;
+  }
+
+  .flow-list {
+    gap: 18px;
+  }
+
+  .flow-item {
+    min-height: 238px;
+    padding: 28px 20px;
+  }
+
+  .flow-item p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .doctor__body p:not(.doctor__name) {
+    color: #526f80;
+    font-weight: 600;
+    line-height: 1.9;
+  }
+
+  .contact-grid {
+    gap: 14px;
+  }
+
+  .contact-grid a {
+    min-height: 100px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 5px 11px;
+    padding: 18px 16px;
+  }
+
+  .contact-grid__icon {
+    justify-self: center;
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-card--line .contact-grid__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .contact-card--line strong {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 980px) {
   .problem-card,
   .risk-card,
@@ -3742,6 +3810,17 @@ main {
     display: block;
     margin-top: 4px;
     font-size: 0.88em;
+  }
+
+  .doctor__body p:not(.doctor__name) {
+    color: #5f7684;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  .flow {
+    padding-bottom: 96px;
   }
 
   .contact-grid .contact-card--line {
