@@ -3135,3 +3135,87 @@ main {
     width: 250px;
   }
 }
+
+/* PC rhythm / header precision
+===================================== */
+@media (min-width: 981px) {
+  .site-header__inner {
+    gap: 30px;
+  }
+
+  .site-nav {
+    align-self: stretch;
+    gap: 26px;
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .site-nav a {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .site-nav a.site-nav__cta {
+    display: none;
+  }
+
+  .site-nav a::after {
+    bottom: 14px;
+  }
+
+  .header-tel,
+  .button--small {
+    font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .problem-card,
+  .risk-card,
+  .diagnosis-card,
+  .case-card,
+  .price-card,
+  .flow-item,
+  .faq-item {
+    box-shadow: 0 16px 36px rgba(17, 106, 149, 0.1);
+  }
+
+  .problem-card {
+    min-height: 154px;
+  }
+
+  .risk-card {
+    min-height: 236px;
+  }
+
+  .diagnosis-card__body {
+    padding: 18px 16px 20px;
+  }
+
+  .flow-item {
+    min-height: 226px;
+  }
+
+  .doctor__inner {
+    gap: 56px;
+  }
+
+  .final-cta {
+    min-height: 350px;
+  }
+}
