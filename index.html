@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20260702-14" />
+    <link rel="stylesheet" href="style.css?v=20260702-15" />
   </head>
   <body>
     <!-- Header -->
@@ -411,7 +411,7 @@
           </div>
           <div class="doctor__body fade-up">
             <h2>一人ひとりに合わせた治療計画を</h2>
-            <p class="doctor__name">院長　青葉 未来（架空プロフィール）</p>
+            <p class="doctor__name">院長　青葉 未来<span>（架空プロフィール）</span></p>
             <p>
               矯正治療は、見た目の変化だけでなく、毎日の食事や会話、治療後の安定にも関わります。
               MIRAI ALIGN DENTALでは、患者さまの生活スタイルや不安に寄り添いながら、必要な検査と説明を丁寧に行うことを大切にしています。
@@ -483,23 +483,23 @@
             </p>
             <a class="button final-cta__main-button" href="#contact">無料矯正相談を予約する</a>
             <div class="contact-grid">
-              <a href="tel:0300000000">
+              <a class="contact-card contact-card--phone" href="tel:0300000000">
                 <span class="contact-grid__icon contact-grid__icon--phone" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6 19.7 19.7 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z" />
                   </svg>
                 </span>
                 <strong>電話で予約する</strong>
-                <span>10:00〜19:00</span>
+                <span>受付 10:00〜19:00</span>
               </a>
-              <a href="#contact">
+              <a class="contact-card contact-card--line" href="#contact">
                 <span class="contact-grid__icon contact-grid__icon--line" aria-hidden="true">
                   <span>LINE</span>
                 </span>
                 <strong>LINEで相談する</strong>
-                <span>24時間受付</span>
+                <span>迷ったらこちら・24時間受付</span>
               </a>
-              <a href="#contact">
+              <a class="contact-card contact-card--web" href="#contact">
                 <span class="contact-grid__icon contact-grid__icon--web" aria-hidden="true">
                   <svg viewBox="0 0 32 32">
                     <rect x="7" y="8.5" width="18" height="17" rx="3" />
@@ -507,7 +507,7 @@
                   </svg>
                 </span>
                 <strong>Webで予約する</strong>
-                <span>24時間受付</span>
+                <span>フォームで予約・24時間受付</span>
               </a>
             </div>
           </div>
@@ -533,10 +533,11 @@
       </div>
     </footer>
 
-    <div class="mobile-fixed-cta" aria-label="固定予約ボタン">
-      <a href="tel:0300000000">電話</a>
-      <a href="#contact">LINE</a>
-      <a href="#contact">Web予約</a>
+    <div class="mobile-fixed-cta" aria-label="固定LINE相談ボタン">
+      <a href="#contact">
+        <span>LINEで相談する</span>
+        <small>24時間受付</small>
+      </a>
     </div>
 
     <script src="script.js?v=20260702-10"></script>
