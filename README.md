@@ -41,7 +41,7 @@ FVでは「目立たない、取り外せる」というわかりやすい訴求
 
 ## 画像生成プロンプト一覧
 
-### logo-horizontal.jpg / favicon-tooth.svg / ogp-mirai-align-dental.png
+### logo-horizontal.jpg / favicon-tooth.svg / ogp-mirai-align-dental-20260710.png
 
 ヘッダー・フッターで使用する横長ロゴ、ブラウザタブ用の歯アイコン、SNS共有用OGP画像。ロゴは視認性を優先し、余白のある横長画像として配置しています。
 
