@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20260702-19" />
+    <link rel="stylesheet" href="style.css?v=20260717-1" />
   </head>
   <body>
     <!-- Header -->
@@ -46,12 +46,12 @@
           <a href="#price">料金</a>
           <a href="#flow">流れ</a>
           <a href="#faq">FAQ</a>
-          <a class="site-nav__cta" href="#contact">無料相談</a>
+          <a class="site-nav__cta js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">無料相談</a>
         </nav>
 
         <div class="site-header__actions">
           <a class="header-tel" href="tel:0300000000">03-0000-0000</a>
-          <a class="button button--small" href="#contact">無料相談</a>
+          <a class="button button--small js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">無料相談</a>
         </div>
 
         <button
@@ -120,7 +120,7 @@
             </div>
 
             <div class="hero__cta">
-              <a class="button button--primary" href="#contact">無料矯正相談を予約する</a>
+              <a class="button button--primary js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">無料矯正相談を予約する</a>
               <p class="hero__note">※料金・症例は架空サンプルです。実際の治療内容は診断により異なります。</p>
             </div>
           </div>
@@ -491,9 +491,9 @@
             <p>
               相談だけでも大丈夫です。治療の可否、期間や費用の目安を知るところから始めましょう。
             </p>
-            <a class="button final-cta__main-button" href="#contact">無料矯正相談を予約する</a>
+            <a class="button final-cta__main-button js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">無料矯正相談を予約する</a>
             <div class="contact-grid">
-              <a class="contact-card contact-card--phone" href="tel:0300000000">
+              <a class="contact-card contact-card--phone js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">
                 <span class="contact-grid__icon contact-grid__icon--phone" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6 19.7 19.7 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z" />
@@ -502,14 +502,14 @@
                 <strong>電話予約</strong>
                 <span>受付<br />10:00〜19:00</span>
               </a>
-              <a class="contact-card contact-card--line" href="#contact">
+              <a class="contact-card contact-card--line js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">
                 <span class="contact-grid__icon contact-grid__icon--line" aria-hidden="true">
                   <span>LINE</span>
                 </span>
                 <strong>LINEで相談する</strong>
                 <span>迷ったらこちら<br />24時間受付</span>
               </a>
-              <a class="contact-card contact-card--web" href="#contact">
+              <a class="contact-card contact-card--web js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">
                 <span class="contact-grid__icon contact-grid__icon--web" aria-hidden="true">
                   <svg viewBox="0 0 32 32">
                     <rect x="7" y="8.5" width="18" height="17" rx="3" />
@@ -544,12 +544,26 @@
     </footer>
 
     <div class="mobile-fixed-cta" aria-label="固定LINE相談ボタン">
-      <a href="#contact">
+      <a class="js-demo-modal-trigger" href="img/demo-reservation-notice.webp" target="_blank" rel="noopener">
         <span>LINEで相談する</span>
         <small>24時間受付</small>
       </a>
     </div>
 
-    <script src="script.js?v=20260702-10"></script>
+    <div class="demo-modal" id="demo-modal" aria-hidden="true">
+      <div class="demo-modal__backdrop" data-demo-modal-close></div>
+      <div class="demo-modal__panel" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+        <button class="demo-modal__close" type="button" aria-label="デモ案内を閉じる" data-demo-modal-close>×</button>
+        <img
+          src="img/demo-reservation-notice.webp"
+          alt="ポートフォリオ用デモサイトです。実際のサイトでは、予約フォーム・LINE相談・電話予約などの外部予約ページへ移動する想定です。"
+          width="1200"
+          height="1200"
+        />
+        <span class="demo-modal__title" id="demo-modal-title">ポートフォリオ用デモサイトです</span>
+      </div>
+    </div>
+
+    <script src="script.js?v=20260717-1"></script>
   </body>
 </html>

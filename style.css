@@ -3872,3 +3872,111 @@ main {
     font-size: 20px;
   }
 }
+
+/* Demo CTA modal
+===================================== */
+body.is-demo-modal-open {
+  overflow: hidden;
+}
+
+.demo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s ease;
+}
+
+.demo-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.demo-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 34, 52, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.demo-modal__panel {
+  position: relative;
+  width: min(680px, calc(100vw - 36px));
+  max-height: calc(100vh - 48px);
+  padding: 16px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 30px 80px rgba(4, 28, 45, 0.34);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.24s ease;
+}
+
+.demo-modal.is-open .demo-modal__panel {
+  transform: translateY(0) scale(1);
+}
+
+.demo-modal__panel img {
+  width: 100%;
+  max-height: calc(100vh - 80px);
+  display: block;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.demo-modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(10, 54, 87, 0.08);
+  border-radius: 50%;
+  color: var(--color-navy);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 16px 34px rgba(10, 54, 87, 0.18);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  transform: translate(35%, -35%);
+}
+
+.demo-modal__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .demo-modal {
+    padding: 16px;
+  }
+
+  .demo-modal__panel {
+    width: min(420px, calc(100vw - 28px));
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .demo-modal__panel img {
+    max-height: calc(100vh - 56px);
+    border-radius: 16px;
+  }
+
+  .demo-modal__close {
+    width: 42px;
+    height: 42px;
+    font-size: 26px;
+    transform: translate(24%, -24%);
+  }
+}

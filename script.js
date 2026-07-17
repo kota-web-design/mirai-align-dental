@@ -85,6 +85,46 @@ document.addEventListener("click", (event) => {
   document.body.classList.remove("is-menu-open");
 });
 
+// Portfolio demo modal
+const demoModal = document.querySelector("#demo-modal");
+const demoModalTriggers = document.querySelectorAll(".js-demo-modal-trigger");
+const demoModalCloseButtons = document.querySelectorAll("[data-demo-modal-close]");
+let lastFocusedElement = null;
+
+const openDemoModal = (trigger) => {
+  if (!demoModal) return;
+  lastFocusedElement = trigger;
+  demoModal.classList.add("is-open");
+  demoModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("is-demo-modal-open");
+  demoModal.querySelector(".demo-modal__close")?.focus();
+};
+
+const closeDemoModal = () => {
+  if (!demoModal || !demoModal.classList.contains("is-open")) return;
+  demoModal.classList.remove("is-open");
+  demoModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("is-demo-modal-open");
+  lastFocusedElement?.focus();
+  lastFocusedElement = null;
+};
+
+demoModalTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    if (!demoModal) return;
+    event.preventDefault();
+    openDemoModal(trigger);
+  });
+});
+
+demoModalCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeDemoModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeDemoModal();
+});
+
 // Mobile fixed CTA appears after the first view
 const fixedCta = document.querySelector(".mobile-fixed-cta");
 const hero = document.querySelector(".hero");
